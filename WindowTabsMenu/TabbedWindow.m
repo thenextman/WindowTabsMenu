@@ -39,6 +39,9 @@ BOOL didAddMenuItem;
 	
 	NSMenuItem *myMenuItem = [[NSMenuItem alloc] initWithTitle:@"My cool item" action:@selector(myCoolAction:) keyEquivalent:@""];
 	
+	NSMenuItem *anotherItem = [tabMenu itemAtIndex:0];
+        myMenuItem.target = anotherItem.target;
+	
 	[tabMenu addItem:myMenuItem];
 	
 	didAddMenuItem = YES;
